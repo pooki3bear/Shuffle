@@ -6,6 +6,7 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       matrix:
@@ -13,6 +14,7 @@ jobs:
          - app: frontend
            path: frontend
            version: 0.8.3
+           experimental: true
          - app: backend
            path: backend
            version: 0.8.3
