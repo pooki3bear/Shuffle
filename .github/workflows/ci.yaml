@@ -18,12 +18,15 @@ jobs:
          - app: backend
            path: backend
            version: 0.8.3
+           experimental: false
          - app: orborus
            path: functions/onprem/orborus
            version: 0.8.0
+           experimental: false
          - app: database
            path: backend/database
            version: 0.8.0
+           experimental: false
     steps:
       -
         name: Checkout
