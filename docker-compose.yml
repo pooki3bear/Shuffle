@@ -1,7 +1,6 @@
 version: '3'
 services:
   frontend:
-    #build: ./frontend
     image: ghcr.io/frikky/shuffle-frontend:0.8.3
     container_name: shuffle-frontend
     hostname: shuffle-frontend
@@ -16,7 +15,6 @@ services:
     depends_on:
       - backend
   backend:
-    #build: ./backend
     image: ghcr.io/frikky/shuffle-backend:0.8.3
     container_name: shuffle-backend
     hostname: ${BACKEND_HOSTNAME}
@@ -44,7 +42,6 @@ services:
     depends_on:
       - database
   orborus:
-    #build: ./functions/onprem/orborus
     image: ghcr.io/frikky/shuffle-orborus:0.8.0
     container_name: shuffle-orborus
     hostname: shuffle-orborus
@@ -68,7 +65,6 @@ services:
       - SHUFFLE_BASE_IMAGE_TAG_SUFFIX=${SHUFFLE_BASE_IMAGE_TAG_SUFFIX}
     restart: unless-stopped
   database:
-    #build: ./backend/database
     image: frikky/shuffle:database
     container_name: shuffle-database
     hostname: shuffle-database
