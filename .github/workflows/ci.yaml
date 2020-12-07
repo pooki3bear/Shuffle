@@ -18,9 +18,9 @@ jobs:
          - app: orborus
            path: functions/onprem/orborus
            version: 0.8.0
-         - app: database
-           path: backend/database
-           version: 0.8.0
+#         - app: database
+#           path: backend/database
+#           version: 0.8.0
     steps:
       -
         name: Checkout
