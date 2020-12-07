@@ -57,7 +57,8 @@ jobs:
         with:
           context: ${{ matrix.path }}/
           file: ${{ matrix.path }}/Dockerfile          
-          platforms: linux/amd64,linux/arm64,linux/386
+          platforms: linux/amd64,linux/arm64
+          #,linux/386
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.app }}:${{ matrix.version }}
       -
